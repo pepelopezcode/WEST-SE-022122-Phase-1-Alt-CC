@@ -36,7 +36,7 @@ commentForm.addEventListener('submit', (event) =>{
     const userComment = event.target.newComment.value
     const commentLi = document.createElement('li')
     commentLi.innerText = userComment;
-    commentList.append(commentLi)
+    commentList.append(commentLi);
 })
 
 

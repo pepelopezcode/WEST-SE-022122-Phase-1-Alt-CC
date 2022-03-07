@@ -4,6 +4,11 @@
  const commentList = document.getElementById('fg-comments');
  const likesButton = document.getElementById('like-button');
  const commentForm = document.getElementById('comment-form');
+ const originalLi1 = document.getElementById('li1')
+ const originalLi2 = document.getElementById('li2')
+ const originalLi3 = document.getElementById('li3')
+
+
 
 
 function renderPageInfo(){
@@ -14,9 +19,9 @@ function renderPageInfo(){
       bookTitle.innerText = data['title']
       bookImage.src = data['image']
       bookLikes.innerText = `${numOfLikes} Likes`
-      document.getElementById('li1').innerText= data['comments'][0]['content'];
-      document.getElementById('li2').innerText=  data['comments'][1]['content'];
-      document.getElementById('li3').innerText=  data['comments'][2]['content'];
+      originalLi1.innerText= data['comments'][0]['content'];
+      originalLi2.innerText=  data['comments'][1]['content'];
+      originalLi3.innerText=  data['comments'][2]['content'];
 
       likesButton.addEventListener('click', function(){
         ++numOfLikes
